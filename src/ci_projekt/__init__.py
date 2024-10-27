@@ -1,5 +1,2 @@
-def main() -> None:
-    print("Hello from ci-projekt!")
-
-def add() -> int:
+def generate_list() -> int:
     return 42

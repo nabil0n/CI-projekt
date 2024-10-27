@@ -1,4 +1,5 @@
-from ci_projekt import add
+from src.ci_projekt import generate_list
 
-def test_add():
-    assert 42 == add()
+
+def test_generate_list():
+    assert 42 == generate_list()
