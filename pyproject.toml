@@ -3,22 +3,19 @@ name = "ci-projekt"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
-authors = [
-    { name = "nabil0n", email = "isak.and@gmail.com" }
-]
 requires-python = ">=3.12"
 dependencies = []
-
-[project.scripts]
-ci-projekt = "ci_projekt:main"
 
 [build-system]
 requires = ["hatchling"]
 build-backend = "hatchling.build"
 
-[dependency-groups]
-dev = [
-    "pyright>=1.1.386",
-    "pytest-cov>=5.0.0",
-    "pytest>=8.3.3",
-]
+
+[tool.distutils.bdist_wheel]
+universal = true
+
+[tool.uv]
+dev-dependencies = ["build>=1.2.1", "pytest-cov>=5.0.0", "pyright>=1.1.381"]
+
+[tool.ruff]
+line-length = 100
